@@ -1,0 +1,112 @@
+﻿body {
+}
+
+.title {
+    line-height: 40px;
+    color: #B03B21;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.queryText {
+    text-align: center;
+    padding-bottom:5px;
+    margin-bottom:0px;
+}
+
+.query {
+    height: 411px;
+}
+
+.wrap {
+    white-space: normal;
+    height:50px;
+}
+
+.mainWindow {
+    border-style: double;
+    border-color: inherit;
+    border-width: medium;
+    background-color: burlywood;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: 60px;
+}
+
+.input {
+    border: double;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: burlywood;
+    width: 70%;
+    height:250px;
+}
+
+.left {
+    margin-top: 5px;
+    width: 50%;
+    float: left;
+}
+
+.combobox {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+
+.output{
+    margin-top:10px;
+}
+
+.right {
+    margin-top: 5px;
+    width: 50%;
+    float: right;
+}
+
+.view {
+    text-align: center;
+    margin: auto;
+}
+
+.task1 {
+    width: 400px;
+}
+
+.task2 {
+    width: 460px;
+}
+
+.box {
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.interface_block {
+    margin-bottom: 10px;
+}
+
+
+.detInput {
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.button_block {
+    margin-left: auto;
+    width: 400px;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.calendar_block {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
