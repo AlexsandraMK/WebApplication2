@@ -53,16 +53,18 @@
             </div>
             <div class="output">
                 <p class="queryText">
-                    <asp:Label ID="infoLabel" runat="server" Text=""></asp:Label></p>
-                <asp:GridView ID="task1GridView" runat="server" AutoGenerateColumns="false" HorizontalAlign="Center">
+                    <asp:Label ID="infoLabel" runat="server" Text=""></asp:Label> <br />
+                    <asp:Label ID="errLabel" runat="server"></asp:Label></p>
+                <asp:GridView ID="task1GridView" runat="server" AutoGenerateColumns="False" HorizontalAlign="Center" >
                     <Columns>
-                        <asp:BoundField DataField="name" HeaderText="Название изделия" />
-                        <asp:BoundField DataField="date_begin" HeaderText="Дата начала" DataFormatString="{0:yyyy-MM-dd}" HtmlEncode="false" />
-                        <asp:BoundField DataField="cost" HeaderText="Рекомендованная цена" />
-                    </Columns>
+                    <asp:BoundField DataField="name" HeaderText="Название изделия" />
+                    <asp:BoundField DataField="date_begin" HeaderText="Дата начала" DataFormatString="{0:yyyy-MM-dd}" HtmlEncode="false" />
+                    <asp:BoundField DataField="cost" HeaderText="Рекомендованная цена" />
+                </Columns>
                 </asp:GridView>
             </div>
         </div>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Назад" />
     </form>
 </body>
 </html>

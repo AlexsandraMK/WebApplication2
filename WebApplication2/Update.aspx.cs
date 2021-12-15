@@ -12,7 +12,24 @@ namespace WebApplication2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           
+            try
+            {
+                errLabel.Text = "";
+                vGridView.DataBind();
+            }
+            catch (Exception)
+            {
+                errLabel.Text = "Ошибка в выполнении запроса";
+            }
+        }
 
+        protected void Page_PreRender(object sender, EventArgs e)
+        {
+            if (vGridView.Rows.Count == 0 && errLabel.Text == "")  // Если запрос вернул 0 строк
+                infoLabel1.Text = "Данных не найдено.";
+            else
+                infoLabel1.Text = "";
         }
 
         protected void execButton_Click(object sender, EventArgs e)
@@ -74,5 +91,11 @@ namespace WebApplication2
             // Завершение соединения
             connection.Close();
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Main.aspx");
+        }
+
     }
 }

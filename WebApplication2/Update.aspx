@@ -42,22 +42,29 @@ Where pmib8408.p.name = ? And pmib8408.p.cvet = ?)
         <div class="query">
             <div class="input">
                 <p class="queryText">Выберите деталь:</p>
-                <div class="combobox">
+
 
                     <div class="detInput">
+
                         <div class="left">
                             <p class="queryText">Название:</p>
-                            <asp:DropDownList ID="pDropDownList" runat="server" AutoPostBack="True" DataSourceID="pDataSource" DataTextField="name_det" DataValueField="name_det" Width="200px" HorizontalAlign="Center" />
+                                            <div class="combobox">
+                            <asp:DropDownList ID="pDropDownList" runat="server" AutoPostBack="True" DataSourceID="pDataSource" DataTextField="name_det" DataValueField="name_det" Width="200px" HorizontalAlign="Center" Height="16px"  />
                         </div>
+                                            </div>
                         <div class="right">
                             <p class="queryText">Цвет:</p>
-                            <asp:DropDownList ID="cvetDropDownList" runat="server" AutoPostBack="True" DataSourceID="cvetDataSource" DataTextField="color" DataValueField="color" Width="200px" HorizontalAlign="Center" />
-                        </div>
-                </div>
+                            <div class="combobox">
+                            <asp:DropDownList ID="cvetDropDownList" runat="server" AutoPostBack="True" DataSourceID="cvetDataSource" DataTextField="color" DataValueField="color" Width="200px" HorizontalAlign="Center"  />
+                       </div>
+                            </div>
+                
             </div>
 
         </div>
-                        <p class="queryText">Последние рекомендованные цены для изделий, в которые входит указанная деталь:</p>
+                        <p class="queryText">Последние рекомендованные цены для изделий, в которые входит указанная деталь:<br />
+                    <asp:Label ID="infoLabel1" runat="server"></asp:Label> <br />
+                    <asp:Label ID="errLabel" runat="server"></asp:Label></p>
             <asp:GridView ID="vGridView" BackColor="White" runat="server" DataSourceID="vDataSource" AutoGenerateColumns="false" HorizontalAlign="Center">
                 <Columns>
                     <asp:BoundField DataField="name" HeaderText="Название изделия" />
@@ -69,6 +76,7 @@ Where pmib8408.p.name = ? And pmib8408.p.cvet = ?)
             <asp:Button ID="execButton" runat="server" OnClick="execButton_Click" Text="Уменьшить последнюю дату изделия на 1 месяц" />
         </div>
             <p class="queryText"><asp:Label ID="infoLabel" runat="server" Text=""></asp:Label></p>
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Назад" />
         </div>
     </form>
 </body>

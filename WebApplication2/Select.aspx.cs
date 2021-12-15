@@ -18,12 +18,28 @@ namespace WebApplication2
         {
             // Обновляем значение GridView
             task1GridView.DataSourceID = "Query1";
-            task1GridView.DataBind();
+            try {
+                errLabel.Text = "";
+                task1GridView.DataBind();
+            }
+            catch (Exception )
+            { 
+                errLabel.Text = "Ошибка в выполнении запроса";
+                task1GridView.DataSourceID = "";
+            }
 
-            // Проверям результат запроса и выводи информацию
+            
             infoLabel.Text = "Результат запроса 1:";
-            if (task1GridView.Rows.Count == 0)
+            
+            if (task1GridView.Rows.Count == 0 && errLabel.Text=="")  // Если запрос вернул 0 строк
                 infoLabel.Text = "Данных не найдено.";
+            else
+                infoLabel.Text = "";
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Main.aspx");   // Переходим на главное окно
         }
     }
 }

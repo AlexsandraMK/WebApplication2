@@ -69,6 +69,24 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.DropDownList cvetDropDownList;
 
         /// <summary>
+        /// infoLabel1 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label infoLabel1;
+
+        /// <summary>
+        /// errLabel элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errLabel;
+
+        /// <summary>
         /// vGridView элемент управления.
         /// </summary>
         /// <remarks>
@@ -94,5 +112,14 @@ namespace WebApplication2
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label infoLabel;
+
+        /// <summary>
+        /// Button1 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }
